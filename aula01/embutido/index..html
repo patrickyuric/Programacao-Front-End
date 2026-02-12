@@ -1,0 +1,58 @@
+<!--
+# Técnico em Desenvolvimento de Sistemas
+# Professor: Patrick Yuri
+
+# Aula 01 - Fundamentos - Modo Embutido
+# Neste exemplo, o JavaScript e o CSS estão embutidos no HTML, o que pode ser útil para protótipos rápidos ou pequenos projetos.
+-->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<!-- O elemento <head> contém metadados e estilos para a página -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patrick Yuri">
+    <title>Aula - Modo Embutido</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<!-- O elemento <body> contém o conteúdo visível da página, incluindo texto, botões e scripts -->
+
+<body>
+
+    <!-- Título principal da página -->
+    <h1>Olá, Alunos!</h1> 
+
+    <!-- Parágrafo explicativo sobre o botão -->
+    <p>Clique no botão para ver o JavaScript funcionando.</p>
+
+    <!-- Botão que chama a função JavaScript quando clicado -->
+    <button onclick="avisar()">Clique aqui</button>
+
+    <!-- O elemento <script> contém o código JavaScript que será executado na página -->
+    <script>
+        function avisar() {
+            alert("O JavaScript funcionou com sucesso!");
+        }
+    </script>
+
+</body>
+
+</html>
