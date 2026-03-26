@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Primeiro React via CDN</title>
+    
+    <!-- 1. Importando o React via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    
+    <!-- 2. Importando o React DOM via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    
+    <!-- 3. Importando o Babel via CDN para traduzir o JSX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+</head>
+<body>
+
+    <!-- Esta é a div vazia onde o React vai injetar toda a aplicação -->
+    <div id="root"></div>
+
+    <!-- Nosso código React precisa do type="text/babel" para ser traduzido -->
+    <script type="text/babel">
+        
+        // Criando um Componente React simples usando JSX
+        function MeuComponente() {
+            // A função retorna o HTML misturado com JS (JSX)
+            const nome = "Mundo";
+            return (
+                <div>
+                    <h1>Olá, {nome}!</h1>
+                    <p>Este é um componente React renderizado via CDN.</p>
+                </div>
+            );
+        }
+
+        // Selecionando a div "root" no HTML
+        const container = document.getElementById('root');
+        
+        // Inicializando o React DOM na div e renderizando o nosso componente
+        const root = ReactDOM.createRoot(container);
+        root.render(<MeuComponente />);
+
+    </script>
+
+</body>
+</html>
